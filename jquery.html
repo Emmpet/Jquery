@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+
+<html lang="sv">
+    <head>
+        <meta charset="utf-8" >
+        <meta name="viewport" content="width=device-width,initial-scale=1" >
+        <title>Emmelie Petersson</title>
+        
+        <!--Jquery-->
+        <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+        
+        <!--https://meyerweb.com/eric/tools/css/reset/-->
+        <link href="meyerreset.css" rel="stylesheet" >
+        
+        <!--Länk till CSS-->
+        <link href="jquery.css" rel="stylesheet">
+        
+        <!--fonts.google.com/specimen/Quicksand-->
+        <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
+      
+    
+    <script>
+                 //JQUERY
+        
+        //Inzoomade menyval
+        
+        $(document).ready(function(){
+            $("a").mouseenter(function() {
+            $(this).css("font-size",  "1.3em");
+                
+            $("a").mouseleave(function() {
+            $(this).css("font-size",  "");   
+      
+           });
+          });
+        })
+        
+        //Göm alla "p"
+        
+        $(document).ready(function(){
+            $("p").hide();
+        })
+        
+        //När knappen "Visa/Dölj" klickas ska "p" taggen och dess text för vänster artikel visas/döljas
+        
+        $(document).ready(function(){
+            $("#Visa").click(function(){
+                $(".article_1 p").toggle();
+                
+            })
+          
+        })
+        
+        //När knappen "Visa/Dölj" klickas ska "p" taggen och dess text för artikeln i mitten visas/döljas
+        
+        $(document).ready(function(){
+            $("#Visa2").click(function(){
+                $(".article_2 p").toggle();
+                
+            })
+        })
+        
+        //När knappen "Visa/Dölj" klickas ska "p" taggen och dess text för höger artikel visas/döljas
+        
+        $(document).ready(function(){
+            $("#Visa3").click(function(){
+                $(".article_3 p").toggle();
+                
+            })
+        })
+        
+        //Hoppa till toppen av sidan via en knapp
+       
+        $(document).ready(function () {
+            $("a[href='#top']").click(function () {
+                $("html, body").animate({
+                    scrollTop: 0 }, "slow");
+                return false;
+            });
+        })
+        
+        //Göm text i headerbild för att sedan "fadeIn" texten när sidan laddas
+        
+        $(document).ready(function (){
+            $(".headertext").hide();
+        });
+        
+        $(document).ready(function () {
+            $(".headertext").fadeIn(2000);
+        });
+        
+        //Visa/Dölj tillhörande text för varje cirkelbild genom "hover"-funktionen
+        
+        $(document).ready(function() {
+            $("h4").hide();
+        })
+        
+        $(document).ready(function () {
+            $(".cirkelbild1").hover(function () {
+                $("#travel1").show();
+            }, function (){
+                $("#travel1").hide();
+            });
+        });
+        
+        $(document).ready(function () {
+            $(".cirkelbild2").hover(function () {
+                $("#travel2").show();
+            }, function (){
+                $("#travel2").hide();
+            });
+        });
+        
+         $(document).ready(function () {
+            $(".cirkelbild3").hover(function () {
+                $("#travel3").show();
+            }, function (){
+                $("#travel3").hide();
+            });
+        });
+            
+    
+    </script>
+       
+        
+    </head>
+    
+    
+<body>
+   
+    <div class="wrapper">
+        <header>
+            <h1>Emmelie Petersson</h1>
+              
+              <div class="meny">
+                 <a>Hem</a>
+                 <a>Resmål</a>
+                 <a>Boka</a>
+                 <a>Bilder</a>  
+                
+              </div> 
+            
+            
+        <div class="headertext"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eu dolor vel nisi auctor aliquam lobortis eget ligula.
+        </div>
+        
+        
+            
+            
+        </header>
+        
+        <article class="article_1">
+            <div class="cirkelbild1"></div>
+            <h4 id="travel1">Grekland</h4>
+            <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eu dolor vel nisi auctor aliquam lobortis eget ligula. Donec eleifend mi eget justo vestibulum cursus. Duis facilisis felis tellus, nec dictum quam imperdiet vitae. Vivamus id dui vitae enim dignissim tempor vel euismod augue. Donec hendrerit sapien libero, pellentesque facilisis odio volutpat ac. Phasellus vel imperdiet nulla. Vestibulum tortor ipsum, laoreet et tincidunt id, aliquam eu metus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Proin egestas metus quis orci egestas consequat. Ut id turpis aliquam, tempor urna id, suscipit felis. Vivamus egestas rutrum consectetur. Duis tincidunt ac massa eget auctor. Sed malesuada felis sed erat vestibulum tristique.</h2>
+            
+            <button style="background-color:#ccddff" type="button" id="Visa">Visa/Dölj</button>
+        
+            <p>Quisque elementum ligula vitae auctor semper. Sed consequat libero ut porta commodo. Sed maximus, justo eget placerat congue, velit orci volutpat turpis, vitae tempus magna felis ac est. Proin eleifend vulputate ligula, eu ullamcorper arcu egestas at. Suspendisse eu eros nunc. Nullam venenatis magna et sem rutrum rhoncus. Quisque nunc elit, porta sit amet metus ut, interdum gravida ex. Pellentesque commodo tincidunt gravida. Morbi vel diam libero. Cras eleifend, turpis id imperdiet finibus, mauris odio aliquet eros, ut sagittis libero ex in sapien. Maecenas sem felis, ultricies ac dui vel, porttitor interdum nibh. Sed pretium nulla nec facilisis mollis. Mauris odio dolor, porttitor vitae facilisis vel, molestie sit amet neque.Morbi iaculis risus pharetra dolor hendrerit fermentum. Pellentesque ac orci vitae nisi posuere maximus vel eget sapien. Nam ac mi auctor, feugiat leo ac, ullamcorper libero. 
+                
+                <br><a href='#top'>Till toppen</a>
+            </p>
+    
+        </article> 
+        
+        <article class="article_2">
+            <div class="cirkelbild2"> </div>
+            <h4 id="travel2">Italien</h4>
+            <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eu dolor vel nisi auctor aliquam lobortis eget ligula. Donec eleifend mi eget justo vestibulum cursus. Duis facilisis felis tellus, nec dictum quam imperdiet vitae. Vivamus id dui vitae enim dignissim tempor vel euismod augue. Donec hendrerit sapien libero, pellentesque facilisis odio volutpat ac. Phasellus vel imperdiet nulla. Vestibulum tortor ipsum, laoreet et tincidunt id, aliquam eu metus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Proin egestas metus quis orci egestas consequat. Ut id turpis aliquam, tempor urna id, suscipit felis. Vivamus egestas rutrum consectetur. Duis tincidunt ac massa eget auctor. Sed malesuada felis sed erat vestibulum tristique.</h2>
+            
+            <button style="background-color:#ccddff" type="button" id="Visa2">Visa/Dölj</button>
+            
+            <p>Quisque elementum ligula vitae auctor semper. Sed consequat libero ut porta commodo. Sed maximus, justo eget placerat congue, velit orci volutpat turpis, vitae tempus magna felis ac est. Proin eleifend vulputate ligula, eu ullamcorper arcu egestas at. Suspendisse eu eros nunc. Nullam venenatis magna et sem rutrum rhoncus. Quisque nunc elit, porta sit amet metus ut, interdum gravida ex. Pellentesque commodo tincidunt gravida. Morbi vel diam libero. Cras eleifend, turpis id imperdiet finibus, mauris odio aliquet eros, ut sagittis libero ex in sapien. Maecenas sem felis, ultricies ac dui vel, porttitor interdum nibh. Sed pretium nulla nec facilisis mollis. Mauris odio dolor, porttitor vitae facilisis vel, molestie sit amet neque.Morbi iaculis risus pharetra dolor hendrerit fermentum. Pellentesque ac orci vitae nisi posuere maximus vel eget sapien. Nam ac mi auctor, feugiat leo ac, ullamcorper libero.
+                
+                <br><a href='#top'>Till toppen</a>
+            </p>
+        
+        </article>
+        
+        <article class="article_3">
+            <div class="cirkelbild3"> </div>
+            <h4 id="travel3">Sardinien</h4>
+            <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eu dolor vel nisi auctor aliquam lobortis eget ligula. Donec eleifend mi eget justo vestibulum cursus. Duis facilisis felis tellus, nec dictum quam imperdiet vitae. Vivamus id dui vitae enim dignissim tempor vel euismod augue. Donec hendrerit sapien libero, pellentesque facilisis odio volutpat ac. Phasellus vel imperdiet nulla. Vestibulum tortor ipsum, laoreet et tincidunt id, aliquam eu metus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Proin egestas metus quis orci egestas consequat. Ut id turpis aliquam, tempor urna id, suscipit felis. Vivamus egestas rutrum consectetur. Duis tincidunt ac massa eget auctor. Sed malesuada felis sed erat vestibulum tristique.</h2>
+            
+            <button style="background-color:#ccddff" type="button" id="Visa3">Visa/Dölj</button>
+        
+            <p>Quisque elementum ligula vitae auctor semper. Sed consequat libero ut porta commodo. Sed maximus, justo eget placerat congue, velit orci volutpat turpis, vitae tempus magna felis ac est. Proin eleifend vulputate ligula, eu ullamcorper arcu egestas at. Suspendisse eu eros nunc. Nullam venenatis magna et sem rutrum rhoncus. Quisque nunc elit, porta sit amet metus ut, interdum gravida ex. Pellentesque commodo tincidunt gravida. Morbi vel diam libero. Cras eleifend, turpis id imperdiet finibus, mauris odio aliquet eros, ut sagittis libero ex in sapien. Maecenas sem felis, ultricies ac dui vel, porttitor interdum nibh. Sed pretium nulla nec facilisis mollis. Mauris odio dolor, porttitor vitae facilisis vel, molestie sit amet neque.Morbi iaculis risus pharetra dolor hendrerit fermentum. Pellentesque ac orci vitae nisi posuere maximus vel eget sapien. Nam ac mi auctor, feugiat leo ac, ullamcorper libero. 
+                
+                
+               <br><a href='#top'>Till toppen</a>
+             
+            </p>
+            
+        
+        </article>
+      
+        
+        <footer>
+            
+            <div>
+                <h3 id="adress"> Adress</h3>
+            </div>   
+            
+            <div>
+                <h3 id="mobilnummer"> Telefon</h3>
+            </div>  
+            
+            <div>
+                <h3 id="mejladress"> E-post</h3>
+            </div>    
+        
+        </footer>
+       
+    </div>
+    
+    
+    
+ 
+</body> 
+    
+</html>
